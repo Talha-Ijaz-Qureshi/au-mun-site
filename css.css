@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "Hubot Sans";
+  src: url("./fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+    url("./fonts/Hubot-Sans.woff2") format("woff2-variations");
+  font-weight: 600 100;
+  font-stretch: 75% 125%;
+}
+
+* {
+  font-family: "Hubot Sans";
+}
+html {
+  --s: 60px; /* control the size */
+  
+  --_g: #0000 83%,#b09f79 85% 99%,#0000 101%;
+  background:
+    radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+    radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+    radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+    radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+    black;
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+
+
+body{
+  background-image: url('hall.png');
+  background-size: 100em;
+  background-repeat: no-repeat;
+  margin: 0;
+  backdrop-filter: brightness(.7);
+  background-position: 50% 0%;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+  
+.fullwrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 300vh;
+  width: 100%;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.navbtn {
+  user-select: none;
+  position: absolute;
+  top: 0vh;
+  left: -2em;
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  box-shadow: #00000042 0px 0px 5px 5px;
+  border-radius: calc(7.5px + 0.1vw);
+  background-color: rgba(255, 207, 148, 0.164);
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1em;
+  padding: .5em;
+  padding-left: 2em;
+  margin: 1em;
+  display: none;
+  font-stretch: 125%;
+}
+
+.navbar h2 {
+  display: none;
+}
+
+.navbar {
+  width: 90%;
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  box-shadow: #00000041 0px 0px 10px 5px;
+  border-radius: calc(7.5px + 0.1vw);
+  position: fixed;
+  top: 0;
+  margin: 1em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  background-image: url('AUSLogo-removebg.png'), url('United_Nations_logo.png');
+  background-repeat: no-repeat;
+  background-size: 3.5em, 3.5em;
+  background-position: 5%, 95%;
+}
+
+.intro {
+  width: 70%;
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  box-shadow: #00000081 0px 0px 10px 10px;
+  border-radius: calc(7.5px + 0.1vw);
+  padding: 1em;
+  margin-top: 15em;
+  margin-bottom: 10em;
+}
+
+.secintro {
+  width: 100%;
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  box-shadow: #00000081 0px 0px 10px 10px;
+}
+
+.secintro h2 {
+  margin: .5em;
+  text-align: center;
+}
+
+.secpara {
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  box-shadow: #00000081 0px 0px 10px 10px;
+  width: 90%;
+  margin: 1em;
+  border-radius: calc(7.5px + 0.1vw);
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secpara img {
+  width: 50%;
+  border-radius: calc(7.5px + 0.1vw);
+}
+
+.secpara p {
+  padding: 1em;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1em;
+  padding: .5em;
+  border-radius: calc(7.5px + 0.1vw);
+  font-weight: 100;
+}
+
+.navbar a:hover {
+  font-weight: 900;
+}
+
+.navbar a:active {
+  scale: .95;
+}
+
+.card {
+  margin-top: 30vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlecard {
+  height: fit-content;
+  margin-left: auto;
+  margin-left: -1em;
+  margin-bottom: 0;
+  padding: 1em 3em 1em 2em;
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  box-shadow: #00000081 0px 0px 10px 5px;
+  border-radius: calc(7.5px + 0.1vw);
+
+}
+
+.ausLogo {
+  margin-left: 7em;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 1em 1em 1em 1em;
+  -moz-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  
+  border-radius: calc(7.5px + 0.1vw);
+
+  height: calc(11em + 10vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ausLogo img {
+  width: calc(9em + 10vw);
+  margin-top: -1em;
+  margin-right: -.5em;
+
+}
+
+h1 {
+  font-weight: 900;
+  font-size: calc(2em + 2.5vw);
+  font-style: italic;
+  font-stretch: 125%;
+  color: rgb(255, 255, 255);
+  text-shadow: rgba(0, 0, 0, 0.48) .05em .05em .09em;
+  margin-bottom: .2em;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-stretch: 75%;
+  font-size: 3em;
+  margin: 0;
+  text-shadow: rgba(0, 0, 0, 0.48) .05em .05em .09em;
+
+}
+
+h4 {
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  padding: .1em;
+  border-radius: 5px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  font-stretch: 125%;
+  font-style: oblique;
+  font-size: 1em;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  .titlecard {
+    margin-top: 50vh;
+  }
+
+  .intro {
+    margin-top: 10em;
+  }
+  .navbar {
+    height: 65vh;
+    width: 90%;
+    z-index: 10000;
+    flex-direction: column;
+    transform: translateY(-130%);
+    transition: transform 1s cubic-bezier(0.2, 0, 0.001, 1);
+    position: fixed;
+    gap: .5em;
+  }
+  
+  .navbar.visible {
+    transform: translateY(10%);
+    transition: transform 1s cubic-bezier(0.2, 0, 0.001, 1);
+  }
+
+  .navbar a {
+    font-size: 2em;
+  }
+  
+
+  .navbar h2 {
+    display: block;
+
+  }
+
+  .navbtn {
+    display: block;
+    transition: cubic-bezier(0.2, 0, 0.001, 1);
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .navbtn h2.rotate {
+    transform: rotate(-180deg);
+  }
+  .card {
+    flex-direction: column;
+    margin-top: 20vh;
+  }
+
+  .ausLogo, .titlecard {
+    margin: 0;
+    padding: 1em;
+    margin: 1.5em;
+    background-position: 50% 50%;
+  }
+
+  .ausLogo {
+    -moz-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);  
+    box-shadow: #00000042 0px 0px 10px 10px;
+    width: 100%;
+  }
+
+.intro {
+  width: 97%;
+}
+
+.secpara {
+  flex-direction: column;
+  width: 90%;
+}
+
+.secpara img {
+  width: 70%;
+}
+
+  }
+
+
+  @media (min-width: 761px) and (max-width: 1190px) {
+
+    .navbar {
+      gap: .5em;
+    }
+
+    .ausLogo {
+      margin-left: 4em;
+    }
+
+  }
