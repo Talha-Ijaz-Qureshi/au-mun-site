@@ -9,7 +9,9 @@
 * {
   font-family: "Hubot Sans";
 }
-html {
+
+body {
+  margin: 0;
   z-index: -1000000000;
   --s: 60px; /* control the size */
   
@@ -23,9 +25,7 @@ html {
   background-size: calc(2*var(--s)) calc(2*var(--s));
 }
 
-
-
-body{
+.fullwrap{
   background-image: url('hall.png');
   background-size: 100em;
   background-repeat: no-repeat;
