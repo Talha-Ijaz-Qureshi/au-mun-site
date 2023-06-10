@@ -13,27 +13,21 @@
 body {
   margin: 0;
   background-color: black;
+  height: 300vh;
+
 }
 
 .fullwrap{
-  background-image: url('hall.png');
-  background-size: 100em;
-  background-repeat: no-repeat;
-  margin: 0;
-  backdrop-filter: brightness(.7);
-  background-position: 50% 0%;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: black;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
+  --s: 60px; /* control the size */
   
-.fullwrap {
+  --_g: #0000 83%,#b09f79 85% 99%,#0000 101%;
+  background:
+    radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+    radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+    radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+    radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+    black;
+  background-size: calc(2*var(--s)) calc(2*var(--s));
   display: flex;
   flex-direction: column;
   min-height: 300vh;
@@ -42,6 +36,22 @@ body {
   overflow-x: hidden;
 }
 
+.bg {
+  position: absolute;
+  top: 0;
+  width: 99vw;
+  overflow: hidden;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  margin-top: 10em;
+}
+  
 .navbtn {
   user-select: none;
   position: absolute;
@@ -89,7 +99,7 @@ body {
   background-size: 3.5em, 3.5em;
   background-position: 5%, 95%;
   background-color: rgba(255, 228, 196, 0.047);
-
+  z-index: 10000;
 }
 
 .intro {
@@ -259,8 +269,11 @@ p {
 
 @media only screen and (max-width: 767px) {
 
+
+  .bg {
+    width: 100em;
+  }
   .fullwrap {
-    background-size: 70em;
     z-index: -1;
   }
 
