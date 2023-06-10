@@ -270,6 +270,7 @@ p {
 
   .fullwrap {
     background-size: 70em;
+    z-index: -1;
   }
 
   .titlecard {
@@ -339,15 +340,20 @@ p {
 
 .intro {
   width: 97%;
+  z-index: 10;
 }
 
 .secpara {
   flex-direction: column;
   width: 90%;
+  z-index: 10;
+
 }
 
 .secpara img {
   width: 70%;
+  z-index: 10;
+
 }
 
   }
