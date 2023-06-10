@@ -10,7 +10,7 @@
   font-family: "Hubot Sans";
 }
 html {
-  z-index: -100;
+  z-index: -1000000000;
   --s: 60px; /* control the size */
   
   --_g: #0000 83%,#b09f79 85% 99%,#0000 101%;
