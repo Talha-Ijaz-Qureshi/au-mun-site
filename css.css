@@ -113,10 +113,11 @@ body {
   margin-top: 15em;
   margin-bottom: 10em;
   background-color: rgba(255, 228, 196, 0.047);
-
+  z-index: 5;
 }
 
 .secintro {
+  z-index: 5;
   width: 100%;
   -moz-backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -144,6 +145,8 @@ body {
   -moz-backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);  
+  z-index: 5;
+
 }
 
 .secpara img {
